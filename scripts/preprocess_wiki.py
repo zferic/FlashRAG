@@ -150,7 +150,6 @@ if __name__ == "__main__":
     parser.add_argument("--dump_path", type=str)
     parser.add_argument(
         "--use_chonkie",
-        type=bool,
         default=True,
         action="store_true",
     )
