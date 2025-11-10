@@ -171,6 +171,7 @@ if __name__ == "__main__":
         nlp = spacy.load("en_core_web_lg")
 
     # extract wiki dump
+    print("Extracting data")
     temp_dir = os.path.join(Path(args.save_path).parent, "temp")
     os.makedirs(temp_dir)
     subprocess.run(
