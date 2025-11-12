@@ -1,8 +1,8 @@
 CUDA_VISIBLE_DEVICES=0 python -m flashrag.retriever.index_builder \
     --retrieval_method e5 \
-    --model_path intfloat/e5-base-v2 \
+    --model_path intfloat/e5-small-v2 \
     --corpus_path /projects/nucar/feric.z/FLashRAG-z/test_sample_2018_sent.jsonl \
-    --save_dir /projects/nucar/feric.z/wikiindex2 \
+    --save_dir /projects/nucar/feric.z/wikiindex2/index2018-e5-small/index \
     --use_fp16 \
     --max_length 256 \
     --batch_size 512 \
