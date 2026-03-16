@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CORPUS_DIR=/projects/nucar/feric.z/rawfiles
+CORPUS_DIR=/projects/nucar/feric.z/rawfiles/128
 BASE_SAVE_DIR=/projects/nucar/feric.z/wikiindex2
 
 FAISS_TYPES=(
