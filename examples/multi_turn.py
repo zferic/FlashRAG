@@ -9,6 +9,7 @@ from flashrag.prompt import PromptTemplate
 parser = argparse.ArgumentParser()
 parser.add_argument("--model_path", type=str)
 args = parser.parse_args()
+
 config_dict = {
     "data_dir": "dataset/",
     "model2path": {"llama3-8B-instruct": args.model_path},

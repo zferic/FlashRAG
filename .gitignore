@@ -6,3 +6,5 @@ build/
 dist/*
 upload_pypi.sh
 tests/*
+oracle_msmarco_full_llama3_answer/
+

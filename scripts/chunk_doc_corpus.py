@@ -59,7 +59,10 @@ if __name__ == "__main__":
     chunked_documents = []
     current_chunk_id = 0
     for doc in tqdm(documents):
-        title, text = doc["contents"].split("\n", 1)
+        if "contents" in doc:
+            title, text = doc["contents"].split("\n", 1)
+        else:
+            title, text = doc.get("title", ""), doc["text"]
         chunks = chunker.chunk(text)
         for chunk in chunks:
             chunked_doc = {

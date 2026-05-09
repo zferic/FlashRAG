@@ -1,13 +1,13 @@
 #!/bin/bash
 
-CORPUS_DIR=/projects/nucar/feric.z/rawfiles/128
+DATA_INDEX_2018=/projects/nucar/feric.z/FLashRAG-z/test_sample_2018_sent.jsonl
 BASE_SAVE_DIR=/projects/nucar/feric.z/wikiindex2
 
 FAISS_TYPES=(
-    "Flat"
-    "SQfp16"
-    "SQ8"
-    "SQ4"
+    #"Flat"
+    #"SQfp16"
+    #"SQ8"
+   # "SQ4"
     "IVF300,Flat"
     "IVF1000,Flat"
     "IVF300,SQfp16"
@@ -19,7 +19,7 @@ FAISS_TYPES=(
 )
 MAX_LENGTHS=(256)
 
-for corpus_path in "${CORPUS_DIR}"/*.jsonl; do
+for corpus_path in "$DATA_INDEX_2018"; do
     filename=$(basename "$corpus_path" .jsonl)
     for faiss_type in "${FAISS_TYPES[@]}"; do
         for max_length in "${MAX_LENGTHS[@]}"; do
