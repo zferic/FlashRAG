@@ -25,7 +25,7 @@ for corpus_path in "$DATA_INDEX_2018"; do
         for max_length in "${MAX_LENGTHS[@]}"; do
             save_dir="${BASE_SAVE_DIR}/${filename}/index_${faiss_type//,/-}_ml${max_length}"
             echo "Running: file=${filename} faiss_type=${faiss_type} max_length=${max_length}"
-            CUDA_VISIBLE_DEVICES=0 python -m flashrag.retriever.index_builder \
+            CUDA_VISIBLE_DEVICES=0,1,2,3 python -m flashrag.retriever.index_builder \
                 --retrieval_method e5 \
                 --model_path intfloat/e5-small-v2 \
                 --corpus_path "$corpus_path" \
